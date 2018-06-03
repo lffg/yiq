@@ -1,0 +1,35 @@
+{
+  "name": "yiq",
+  "version": "1.0.0",
+  "description": "Returns white when a color is dark and black when a color is light.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "japa": "^1.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node ./test/yiq.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lffg/yiq.git"
+  },
+  "keywords": [
+    "yiq",
+    "color",
+    "black",
+    "white",
+    "light",
+    "dark",
+    "color-convert"
+  ],
+  "author": "Luiz Felipe F. <https://lffg.github.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lffg/yiq/issues"
+  },
+  "homepage": "https://github.com/lffg/yiq#readme"
+}
