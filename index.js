@@ -13,12 +13,12 @@ module.exports = yiq
  * @return  {string} 
  */
 function yiq (colorHex, options = {}) {
-  if (! options instanceof Object) {
+  if (! (options instanceof Object)) {
     throw new TypeError('The param options must be of the type object.')
   }
 
-  white = options.white || '#fff'
-  dark  = options.dark || '#000'
+  const white = options.white || '#fff'
+  const dark  = options.dark || '#000'
 
   if (! /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(colorHex)) {
     return '#fff'
