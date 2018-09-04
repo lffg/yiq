@@ -17,8 +17,8 @@ function yiq (colorHex, options = {}) {
     throw new TypeError('The param options must be of the type object.')
   }
 
-  white = options.white || '#fff'
   dark  = options.dark || '#000'
+  white = options.white || '#fff'
 
   if (! /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(colorHex)) {
     return '#fff'
