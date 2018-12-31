@@ -1,6 +1,6 @@
 export interface IOptions {
-  white?: string
-  black?: string
+  white: string
+  black: string
 }
 
 const DEFAULT_OPTIONS: IOptions = {
