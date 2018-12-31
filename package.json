@@ -1,6 +1,6 @@
 {
   "name": "yiq",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Returns white when a color is dark and black when a color is light.",
   "files": [
     "dist"
