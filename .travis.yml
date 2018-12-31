@@ -6,4 +6,4 @@ sudo: false
 install:
   - npm install
 script:
-  - npm run check
+  - npm run check-all
