@@ -38,8 +38,8 @@ console.log(yiq('#000')) // #fff
 function colorYiq(
   colorHex: string,
   options?: {
-    white: string
-    black: string
+    white?: string
+    black?: string
   }
 ): string
 ```
