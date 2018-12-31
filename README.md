@@ -1,26 +1,26 @@
-# `yiq`
+# YIQ
 
-> Returns white when a color is dark and black when a color is light. :art:
+Returns white when a color is dark and black when a color is light. 🎨
+
+[![Build Status](https://travis-ci.com/lffg/yiq.svg?branch=master&style=flat-square)](https://travis-ci.com/lffg/yiq)
+[![NPM](https://img.shields.io/npm/v/yiq.svg?logo=npm)](https://npmjs.org/package/yiq)
+![Uses TypeScript](https://img.shields.io/badge/Uses-Typescript-294E80.svg)
 
 ## Installing
 
-If you are using NPM:
-
-```shell
-npm i --save yiq
-```
-
-If you are using Yarn:
 ```shell
 yarn add yiq
+
+# If you're using NPM:
+# npm install yiq --save
 ```
 
 ## Basic Usage
 
 Just call the `yiq` function after importing it:
 
-```javascript
-const yiq = require('yiq')
+```typescript
+import yiq from 'yiq'
 
 console.log(yiq('#fff')) // #000
 console.log(yiq('#000')) // #fff
@@ -30,18 +30,24 @@ console.log(yiq('#000')) // #fff
 
 ### `yic`
 
-`yiq` — Returns a light color when a color is dark and dark color when a color is light.
+`yiq` — Returns a light color when a color is dark and black color when a color is light.
 
 #### Description
 
-```javascript
-string yiq ( string hexColor [, object options ] )
+```typescript
+function colorYiq(
+  colorHex: string,
+  options?: {
+    white?: string
+    black?: string
+  }
+): string
 ```
 
-The second parameter (options) should be used to define the colors that the function will return:
+The second argument (options) should be used to define the colors that the function will return:
 
-```javascript
-yic('#fff', {
+```typescript
+yiq('#fff', {
   white: '#f0f0f0',
   dark: '#333'
 }) // #333
@@ -50,9 +56,10 @@ yic('#fff', {
 The defaults are:
 
 - `options.white`: `#fff`;
-- `options.dark`: `#000`.
+- `options.black`: `#000`.
 
-## License
+## Authors and License
 
-The source code of this repository is under the [MIT License](https://github.com/lffg/yiq/blob/master/LICENSE).  
-Copyright © [Luiz Felipe F.](https://lffg.github.io).
+[lffg](https://github.com/lffg) and [contributors](https://github.com/lffg/yiq/graphs/contributors).
+
+MIT License, see the included [MIT](https://github.com/lffg/yiq/blob/master/LICENSE) file.
