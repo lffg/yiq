@@ -17,7 +17,9 @@
     "coverage:watch": "jest --coverage --watch",
     "check-all": "yarn format && yarn lint && yarn test",
     "precommit": "yarn lint-staged && yarn lint && yarn test",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prepublish": "yarn build",
+    "publish": "yarn prepublish && npm publish ."
   },
   "husky": {
     "hooks": {
