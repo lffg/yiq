@@ -8,16 +8,21 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc --watch",
+    "build": "yarn check-all && del ./dist && tsc",
     "format": "prettier --config .prettierrc.json --write 'src/**/*'",
     "lint": "tslint --project tsconfig.json",
     "test": "jest --verbose",
-    "test:watch": "jest --verbose --watch",
-    "test:silent": "jest",
-    "check": "yarn format && yarn lint && yarn test",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "coverage:watch": "jest --coverage --watch",
+    "check-all": "yarn format && yarn lint && yarn test",
     "precommit": "yarn lint-staged && yarn lint && yarn test",
     "commit": "git-cz"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "yarn precommit"
+    }
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,css,md}": [
@@ -27,6 +32,7 @@
   },
   "devDependencies": {
     "@types/jest": "^23.3.11",
+    "del-cli": "^1.1.0",
     "git-cz": "^1.8.0",
     "husky": "^1.3.1",
     "jest": "^23.6.0",
