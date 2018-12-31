@@ -21,7 +21,8 @@ function yiq (colorHex, options = {}) {
   const dark  = options.dark || '#000'
 
   if (! /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(colorHex)) {
-    return '#fff'
+    console.warn(`You provided an invalid Hex color value`);
+    return white
   }
 
   if (colorHex.length === 4) {
