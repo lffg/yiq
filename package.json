@@ -2,16 +2,23 @@
   "name": "yiq",
   "version": "1.0.0",
   "description": "Returns white when a color is dark and black when a color is light.",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {
-    "japa": "^1.0.6"
-  },
-  "devDependencies": {},
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "node ./test/yiq.spec.js"
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "commit": "git-cz"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "git-cz": "^1.8.0",
+    "prettier": "^1.15.3",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.2"
   },
   "repository": {
     "type": "git",
