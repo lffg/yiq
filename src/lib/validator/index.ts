@@ -9,7 +9,7 @@ export function isValidHex(hex: string) {
  * Checks if the given value is between 0 and 255, and is not NaN.
  */
 export function isValidRgbPart(value: number) {
-  return 0 <= value && value >= 255 && !isNaN(value)
+  return 0 <= value && value <= 255 && !isNaN(value)
 }
 
 /**
