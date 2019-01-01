@@ -1,3 +1,5 @@
+import { isValidHex } from '../validator'
+
 export interface IOptions {
   white: string
   black: string
@@ -6,13 +8,6 @@ export interface IOptions {
 const DEFAULT_OPTIONS: IOptions = {
   white: '#fff',
   black: '#000'
-}
-
-/**
- * Checks if the given hex code is valid.
- */
-export function isValidHex(hex: string) {
-  return /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(hex)
 }
 
 /**
