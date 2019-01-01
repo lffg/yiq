@@ -1,4 +1,4 @@
-import { isValidHex } from '../validate'
+import { isValidHex } from '../validator'
 
 export interface IOptions {
   white: string
