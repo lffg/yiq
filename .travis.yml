@@ -7,3 +7,5 @@ install:
   - npm install
 script:
   - npm run check-all
+after_script:
+  - npm run coverage
