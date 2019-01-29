@@ -28,7 +28,7 @@ console.log(yiq('#000')) // #fff
 
 ## API
 
-### `yic`
+### `yiq`
 
 `yiq` — Returns a light color when a color is dark and black color when a color is light.
 
