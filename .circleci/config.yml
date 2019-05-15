@@ -6,12 +6,6 @@ jobs:
       - image: circleci/node:11
     steps:
       - checkout
-      - run:
-        name: Log Node.js version
-        command: 'echo "ℹ️  Node version: $(node --version)"'
-      - run:
-        name: Log Yarn version
-        command: 'echo "ℹ️  Yarn version: $(yarn --version)"'
       - restore_cache:
         name: Restore Yarn Package Cache
         keys:
@@ -24,6 +18,5 @@ jobs:
         key: yarn-packages-{{ checksum "yarn.lock" }}
         paths:
           - ~/.cache/yarn
-      - run:
-        name: Check All (Lint and Test)
-        command: yarn check-all
+      - run: yarn lint
+      - run: yarn test
