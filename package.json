@@ -8,10 +8,13 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
+    "eslint": "^5.16.0",
+    "eslint-config-lffg": "^1.0.2",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
     "typescript": "^3.4.5"
