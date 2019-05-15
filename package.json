@@ -6,13 +6,17 @@
     "dist"
   ],
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "test": "jest"
+    "test": "jest",
+    "del-dist": "del dist",
+    "build": "yarn del-dist && yarn lint && yarn test && tsc",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
+    "del-cli": "^1.1.0",
     "eslint": "^5.16.0",
     "eslint-config-lffg": "^1.0.2",
     "jest": "^24.8.0",
@@ -37,5 +41,8 @@
   "bugs": {
     "url": "https://github.com/lffg/yiq/issues"
   },
-  "homepage": "https://github.com/lffg/yiq#readme"
+  "homepage": "https://github.com/lffg/yiq#readme",
+  "dependencies": {
+    "@types/node": "^12.0.2"
+  }
 }
