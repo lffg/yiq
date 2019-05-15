@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/yiq
+    docker:
+      - image: circleci/node:11
+    steps:
+      - checkout
+      - run:
+        name: Log Node.js version
+        command: 'echo "ℹ️  Node version: $(node --version)"'
+      - run:
+        name: Log Yarn version
+        command: 'echo "ℹ️  Yarn version: $(yarn --version)"'
+      - restore_cache:
+        name: Restore Yarn Package Cache
+        keys:
+          - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+        name: Install Dependencies
+        command: yarn install --frozen-lockfile
+      - save_cache:
+        name: Save Yarn Package Cache
+        key: yarn-packages-{{ checksum "yarn.lock" }}
+        paths:
+          - ~/.cache/yarn
+      - run:
+        name: Check All (Lint and Test)
+        command: yarn check-all
