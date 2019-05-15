@@ -1,4 +1,4 @@
-import yiq, { YiqOptions } from '../lib'
+import yiq, { YiqOptions } from '../src'
 
 const equal = (array: string[], param: string) =>
   array.map((value) => yiq(value)).every((color) => color === param)

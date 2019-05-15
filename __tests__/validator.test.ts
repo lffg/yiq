@@ -1,4 +1,4 @@
-import { isValidHex } from '../lib'
+import { isValidHex } from '../src'
 
 describe('isValidHex validator', () => {
   it('should return true when a valid hex is passed', () => {
