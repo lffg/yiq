@@ -6,8 +6,12 @@ jobs:
       - image: circleci/node:11
     steps:
       - checkout
-      - run: 'echo "ℹ️  Node.js version: $(node --version)"'
-      - run: 'echo "ℹ️  Yarn version: $(yarn --version)"'
+      - run:
+          name: Yarn version
+          command: 'echo "ℹ️  Node.js version: $(node --version)"'
+      - run:
+          name: Node.js version
+          command: 'echo "ℹ️  Yarn version: $(yarn --version)"'
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
