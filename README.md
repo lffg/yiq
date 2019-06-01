@@ -2,7 +2,7 @@
 
 Returns white when a color is dark and black when a color is light. 🎨
 
-[![Build Status](https://travis-ci.com/lffg/yiq.svg?branch=master&style=flat-square)](https://travis-ci.com/lffg/yiq)
+[![Build Status](https://circleci.com/gh/lffg/yiq.svg?style=svg)](https://circleci.com/gh/lffg/yiq)
 [![NPM](https://img.shields.io/npm/v/yiq.svg?logo=npm)](https://npmjs.org/package/yiq)
 ![Uses TypeScript](https://img.shields.io/badge/Uses-Typescript-294E80.svg)
 
