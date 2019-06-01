@@ -1,4 +1,4 @@
-import { isValidHex } from '../src'
+import { isValidHex } from '../src/yiq'
 
 describe('isValidHex validator', () => {
   it('should return true when a valid hex is passed', () => {

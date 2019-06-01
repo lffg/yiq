@@ -5,8 +5,9 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/yiq.commonjs.js",
+  "module": "dist/yiq.js",
+  "typings": "dist/yiq.d.ts",
   "scripts": {
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "test": "jest",

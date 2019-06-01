@@ -1,5 +1,5 @@
-import { isValidHex } from './utils/validation'
 import { YiqOptions } from './utils/types'
+import { isValidHex } from './utils/validation'
 
 const defaultOptions: YiqOptions = {
   white: '#fff',
