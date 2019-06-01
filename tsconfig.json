@@ -1,6 +1,3 @@
-// 20190514222027
-// https://raw.githubusercontent.com/lffg/yiq/master/tsconfig.json
-
 {
   "include": ["src"],
   "exclude": ["node_modules"],
