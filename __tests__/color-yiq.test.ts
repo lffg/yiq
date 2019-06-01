@@ -1,4 +1,4 @@
-import yiq, { IOptions } from '../src'
+import yiq, { YiqOptions } from '../src/yiq'
 
 const equal = (array: string[], param: string) =>
   array.map((value) => yiq(value)).every((color) => color === param)
@@ -17,12 +17,12 @@ describe('yiq', () => {
   })
 
   it('should use the options passed by the user over the default ones', () => {
-    const OPTIONS: IOptions = {
+    const options: YiqOptions = {
       white: '#ddd',
       black: '#333'
     }
 
-    expect(yiq('#fff', OPTIONS)).toBe('#333')
-    expect(yiq('#000', OPTIONS)).toBe('#ddd')
+    expect(yiq('#fff', options)).toBe('#333')
+    expect(yiq('#000', options)).toBe('#ddd')
   })
 })

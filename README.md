@@ -53,7 +53,7 @@ yiq('#fff', {
 }) // #333
 ```
 
-The defaults are:
+The default options are:
 
 - `options.white`: `#fff`;
 - `options.black`: `#000`.
