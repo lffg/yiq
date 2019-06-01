@@ -16,12 +16,12 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
-    "del-cli": "^1.1.0",
+    "del-cli": "^2.0.0",
     "eslint": "^5.16.0",
-    "eslint-config-lffg": "^1.0.2",
+    "eslint-config-lffg": "^1.2.0",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.4.5"
+    "typescript": "^3.5.1"
   },
   "repository": {
     "type": "git",
@@ -41,8 +41,5 @@
   "bugs": {
     "url": "https://github.com/lffg/yiq/issues"
   },
-  "homepage": "https://github.com/lffg/yiq#readme",
-  "dependencies": {
-    "@types/node": "^12.0.2"
-  }
+  "homepage": "https://github.com/lffg/yiq#readme"
 }
