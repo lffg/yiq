@@ -1273,10 +1273,10 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-lffg@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-lffg/-/eslint-config-lffg-1.2.0.tgz#9029fcae814fceacdb3aa4b78d527dfd5571181d"
-  integrity sha512-E1fcI04HOu6ok8BogzArcYjHJmFMDUSqkHJTP82SRVAItrFKndG9vBD3QmUrRSA+biToO+LESAY9zaldW6WJfw==
+eslint-config-lffg@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-lffg/-/eslint-config-lffg-1.5.0.tgz#7c8dfed230366267e1a4c25ce8c7c3c9321a7114"
+  integrity sha512-aPvtbO3ChLxF4eoEl0yW9IbNpO/U8N1Am52njLiaJG+mGPzcTuJCc0d2HE6sFf+kjbJp3qWVSsR0vCiiqmxV7A==
   dependencies:
     "@typescript-eslint/eslint-plugin" "1.x"
     "@typescript-eslint/parser" "1.x"
