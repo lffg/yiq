@@ -1,4 +1,4 @@
 export interface YiqOptions {
-  white: string
-  black: string
+  white: string;
+  black: string;
 }
