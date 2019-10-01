@@ -17,9 +17,11 @@ export function colorYiq(colorHex: string, userOptions?: YiqOptions) {
     colorHex = colorHex.replace(/^#(.)(.)(.)/i, '#$1$1$2$2$3$3');
   }
 
-  const r = parseInt(colorHex.substr(1, 2), 16);
-  const g = parseInt(colorHex.substr(3, 2), 16);
-  const b = parseInt(colorHex.substr(5, 2), 16);
+  const n = parseInt(colorHex.slice(1), 16);
+
+  const r = (n & 0xff0000) >> 16;
+  const g = (n & 0xff00) >> 8;
+  const b = n & 0xff;
 
   const yiq = (r * 299 + g * 587 + b * 114) / 1000;
 
