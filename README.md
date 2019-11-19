@@ -49,7 +49,7 @@ The second argument (options) should be used to define the colors that the funct
 ```typescript
 yiq('#fff', {
   white: '#f0f0f0',
-  dark: '#333'
+  black: '#333'
 }) // #333
 ```
 
