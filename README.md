@@ -44,7 +44,7 @@ function colorYiq(
 ): string
 ```
 
-The second argument (options) should be used to define the colors that the function will return:
+The second argument (options) can be used to define the colors that the function will return:
 
 ```typescript
 yiq('#fff', {
@@ -53,10 +53,16 @@ yiq('#fff', {
 }) // #333
 ```
 
+It can also be used to define the threshold YIQ value at which the function switches between white and black:
+```typescript
+yiq('#36d386', { threshold: 156 }) // #fff
+```
+
 The default options are:
 
 - `options.white`: `#fff`;
-- `options.black`: `#000`.
+- `options.black`: `#000`;
+- `options.threshold`: 128.
 
 ## Authors and License
 
