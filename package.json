@@ -7,7 +7,7 @@
   "types": "build/yiq.d.ts",
   "module": "build/yiq.mjs",
   "files": [
-    "dist"
+    "build"
   ],
   "scripts": {
     "format:raw": "prettier --write --ignore-path .gitignore",
