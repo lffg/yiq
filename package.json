@@ -1,7 +1,7 @@
 {
   "name": "yiq",
   "license": "MIT",
-  "version": "4.0.0-1",
+  "version": "4.0.0",
   "description": "Returns light when a color is dark and dark when a color is light (and a little more).",
   "main": "build/yiq.js",
   "types": "build/yiq.d.ts",
