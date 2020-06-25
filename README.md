@@ -30,7 +30,7 @@ console.log(yiq('#000')) // #fff
 
 ### `yiq`
 
-`yiq` — Returns a light color when a color is dark and dark color when a color is light.
+`yiq` — Returns a light color when a color is dark and a dark color when a color is light.
 
 #### Description
 
