@@ -1,28 +1,69 @@
 {
   "name": "yiq",
+  "license": "MIT",
   "version": "3.0.1",
   "description": "Returns light when a color is dark and dark when a color is light (and a little more).",
+  "main": "build/yiq.js",
+  "types": "build/yiq.d.ts",
+  "module": "build/yiq.mjs",
   "files": [
     "dist"
   ],
-  "main": "dist/yiq.commonjs.js",
-  "module": "dist/yiq.js",
-  "typings": "dist/yiq.d.ts",
   "scripts": {
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "format:raw": "prettier --write --ignore-path .gitignore",
+    "format": "yarn format:raw '**/*.{json,md,yml,yaml}' && yarn lint --fix",
+    "lint": "yarn lint:raw .",
+    "lint:raw": "eslint --max-warnings=0 --ignore-path .gitignore --ignore-pattern '!.*.*'",
+    "check:ts": "tsc --noEmit --skipLibCheck",
     "test": "jest",
-    "del-dist": "del dist",
-    "build": "yarn del-dist && yarn lint && yarn test && tsc",
+    "check:all": "yarn lint && yarn check:ts && yarn test",
+    "prebuild": "yarn check:all",
+    "build": "del build && rollup -c",
     "prepublishOnly": "yarn build"
   },
+  "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^24.0.13",
-    "del-cli": "^2.0.0",
-    "eslint": "^5.16.0",
-    "eslint-config-lffg": "1.5.0",
-    "jest": "^24.8.0",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.5.1"
+    "@types/jest": "26.0.3",
+    "del-cli": "3.0.1",
+    "eslint": "^7.3.1",
+    "eslint-config-lffg": "^20.0.0",
+    "husky": "^4.2.5",
+    "jest": "26.1.0",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "rollup": "^2.18.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "ts-jest": "26.1.1",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "lffg"
+    ],
+    "rules": {
+      "import/no-default-export": "off",
+      "no-param-reassign": "off"
+    }
+  },
+  "prettier": "eslint-config-lffg/prettier",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn check:all"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint:raw --fix",
+      "yarn test --findRelatedTests"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "yarn format:raw"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -38,7 +79,6 @@
     "color-convert"
   ],
   "author": "Luiz Felipe Gonçalves <https://luizfelipe.dev>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lffg/yiq/issues"
   },
