@@ -1,4 +1,9 @@
 export interface YiqOptions {
-  white: string;
-  black: string;
+  colors: {
+    light: string;
+    dark: string;
+  };
+  threshold: number;
 }
+
+export type YiqUserOptions = Partial<YiqOptions>;

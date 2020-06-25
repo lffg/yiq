@@ -1,16 +1,25 @@
-import { YiqOptions } from './utils/types';
-import { isValidHex } from './utils/validation';
+import { YiqOptions, YiqUserOptions } from './utils/types';
+import { isValidHex, isValidThreshold } from './utils/validation';
 
 const defaultOptions: YiqOptions = {
-  white: '#fff',
-  black: '#000'
+  colors: {
+    light: '#fff',
+    dark: '#000'
+  },
+  threshold: 128
 };
 
-export function colorYiq(colorHex: string, userOptions?: YiqOptions) {
+export function colorYiq(colorHex: string, userOptions?: YiqUserOptions) {
   const options = { ...defaultOptions, ...userOptions };
 
   if (!isValidHex(colorHex)) {
     throw new Error(`The value "${colorHex}" is not a valid hex color string.`);
+  }
+
+  if (!isValidThreshold(options.threshold)) {
+    throw new Error(
+      `The threshold option "${options.threshold}" must be between 0 and 255.`
+    );
   }
 
   if (colorHex.length === 4) {
@@ -25,5 +34,5 @@ export function colorYiq(colorHex: string, userOptions?: YiqOptions) {
 
   const yiq = (r * 299 + g * 587 + b * 114) / 1000;
 
-  return yiq >= 128 ? options.black : options.white;
+  return yiq >= options.threshold ? options.colors.dark : options.colors.light;
 }

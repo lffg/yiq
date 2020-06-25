@@ -1,6 +1,6 @@
 # YIQ
 
-Returns white when a color is dark and black when a color is light. 🎨
+Returns light when a color is dark and dark when a color is light. 🎨
 
 [![Build Status](https://circleci.com/gh/lffg/yiq.svg?style=svg)](https://circleci.com/gh/lffg/yiq)
 [![NPM](https://img.shields.io/npm/v/yiq.svg?logo=npm)](https://npmjs.org/package/yiq)
@@ -30,7 +30,7 @@ console.log(yiq('#000')) // #fff
 
 ### `yiq`
 
-`yiq` — Returns a light color when a color is dark and black color when a color is light.
+`yiq` — Returns a light color when a color is dark and a dark color when a color is light.
 
 #### Description
 
@@ -38,25 +38,36 @@ console.log(yiq('#000')) // #fff
 function colorYiq(
   colorHex: string,
   options?: {
-    white: string
-    black: string
+    colors? {
+      light: string
+      dark: string
+    },
+    threshold?: number
   }
 ): string
 ```
 
-The second argument (options) should be used to define the colors that the function will return:
+The second argument (options) can be used to define the colors that the function will return:
 
 ```typescript
 yiq('#fff', {
-  white: '#f0f0f0',
-  black: '#333'
+  colors: {
+    light: '#f0f0f0',
+    dark: '#333'
+  }
 }) // #333
+```
+
+It can also be used to define the threshold YIQ value at which the function switches between light and dark:
+```typescript
+yiq('#36d386', { threshold: 156 }) // #fff
 ```
 
 The default options are:
 
-- `options.white`: `#fff`;
-- `options.black`: `#000`.
+- `options.colors.light`: `#fff`;
+- `options.colors.dark`: `#000`;
+- `options.threshold`: 128.
 
 ## Authors and License
 
