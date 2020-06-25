@@ -20,10 +20,10 @@ yarn add yiq
 Just call the `yiq` function after importing it:
 
 ```typescript
-import yiq from 'yiq'
+import yiq from 'yiq';
 
-console.log(yiq('#fff')) // #000
-console.log(yiq('#000')) // #fff
+console.log(yiq('#fff')); // #000
+console.log(yiq('#000')); // #fff
 ```
 
 ## API
@@ -35,16 +35,16 @@ console.log(yiq('#000')) // #fff
 #### Description
 
 ```typescript
-function colorYiq(
+function yiq(
   colorHex: string,
   options?: {
-    colors? {
-      light: string
-      dark: string
-    },
-    threshold?: number
+    colors?: {
+      light: string;
+      dark: string;
+    };
+    threshold?: number;
   }
-): string
+): string;
 ```
 
 The second argument (options) can be used to define the colors that the function will return:
@@ -55,19 +55,20 @@ yiq('#fff', {
     light: '#f0f0f0',
     dark: '#333'
   }
-}) // #333
+}); // #333
 ```
 
 It can also be used to define the threshold YIQ value at which the function switches between light and dark:
+
 ```typescript
-yiq('#36d386', { threshold: 156 }) // #fff
+yiq('#36d386', { threshold: 156 }); // #fff
 ```
 
 The default options are:
 
 - `options.colors.light`: `#fff`;
 - `options.colors.dark`: `#000`;
-- `options.threshold`: 128.
+- `options.threshold`: `128`.
 
 ## Authors and License
 
