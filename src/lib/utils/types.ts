@@ -1,7 +1,7 @@
 export interface YiqOptions {
   colors: {
-    white: string;
-    black: string;
+    light: string;
+    dark: string;
   };
   threshold: number;
 }

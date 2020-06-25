@@ -3,8 +3,8 @@ import { isValidHex, isValidThreshold } from './utils/validation';
 
 const defaultOptions: YiqOptions = {
   colors: {
-    white: '#fff',
-    black: '#000'
+    light: '#fff',
+    dark: '#000'
   },
   threshold: 128
 };
@@ -34,5 +34,5 @@ export function colorYiq(colorHex: string, userOptions?: YiqUserOptions) {
 
   const yiq = (r * 299 + g * 587 + b * 114) / 1000;
 
-  return yiq >= options.threshold ? options.colors.black : options.colors.white;
+  return yiq >= options.threshold ? options.colors.dark : options.colors.light;
 }

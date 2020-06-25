@@ -19,8 +19,8 @@ describe('yiq', () => {
   it('should use the color options passed by the user over the default ones', () => {
     const options: YiqUserOptions = {
       colors: {
-        white: '#ddd',
-        black: '#333'
+        light: '#ddd',
+        dark: '#333'
       }
     };
 
