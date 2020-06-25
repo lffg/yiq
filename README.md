@@ -2,7 +2,7 @@
 
 Returns light when a color is dark and dark when a color is light. 🎨
 
-[![Build Status](https://circleci.com/gh/lffg/yiq.svg?style=svg)](https://circleci.com/gh/lffg/yiq)
+[![CI](https://github.com/lffg/yiq/workflows/CI/badge.svg)](https://github.com/lffg/errou/actions)
 [![NPM](https://img.shields.io/npm/v/yiq.svg?logo=npm)](https://npmjs.org/package/yiq)
 ![Uses TypeScript](https://img.shields.io/badge/Uses-Typescript-294E80.svg)
 
