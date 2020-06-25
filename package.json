@@ -19,14 +19,14 @@
     "prepublishOnly": "yarn build"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.13",
-    "del-cli": "^2.0.0",
+    "@types/jest": "26.0.3",
+    "del-cli": "3.0.1",
     "eslint": "^7.3.1",
     "eslint-config-lffg": "^20.0.0",
-    "jest": "^24.8.0",
+    "jest": "26.1.0",
     "rollup": "^2.18.0",
     "rollup-plugin-typescript2": "^0.27.1",
-    "ts-jest": "^24.0.2",
+    "ts-jest": "26.1.1",
     "tslib": "^2.0.0",
     "typescript": "^3.9.5"
   },
