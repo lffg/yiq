@@ -1,5 +1,6 @@
 {
   "name": "yiq",
+  "license": "MIT",
   "version": "3.0.1",
   "description": "Returns light when a color is dark and dark when a color is light (and a little more).",
   "files": [
@@ -24,6 +25,16 @@
     "ts-jest": "^24.0.2",
     "typescript": "^3.9.5"
   },
+  "eslintConfig": {
+    "extends": [
+      "lffg"
+    ],
+    "rules": {
+      "import/no-default-export": "off",
+      "no-param-reassign": "off"
+    }
+  },
+  "prettier": "eslint-config-lffg/prettier",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lffg/yiq.git"
@@ -38,7 +49,6 @@
     "color-convert"
   ],
   "author": "Luiz Felipe Gonçalves <https://luizfelipe.dev>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lffg/yiq/issues"
   },
