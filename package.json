@@ -9,7 +9,7 @@
   "module": "dist/yiq.js",
   "typings": "dist/yiq.d.ts",
   "scripts": {
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint": "eslint --max-warnings=0 --ignore-path .gitignore --ignore-pattern '!.*.*' .",
     "test": "jest",
     "del-dist": "del dist",
     "build": "yarn del-dist && yarn lint && yarn test && tsc",
@@ -18,11 +18,11 @@
   "devDependencies": {
     "@types/jest": "^24.0.13",
     "del-cli": "^2.0.0",
-    "eslint": "^5.16.0",
-    "eslint-config-lffg": "1.5.0",
+    "eslint": "^7.3.1",
+    "eslint-config-lffg": "^20.0.0",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.5.1"
+    "typescript": "^3.9.5"
   },
   "repository": {
     "type": "git",

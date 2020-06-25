@@ -1,6 +1,7 @@
 {
   "extends": ["lffg"],
   "rules": {
-    "import/prefer-default-export": "off"
+    "import/no-default-export": "off",
+    "no-param-reassign": "off"
   }
 }
