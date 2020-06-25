@@ -20,7 +20,7 @@ yarn add yiq
 Just call the `yiq` function after importing it:
 
 ```typescript
-import yiq from 'yiq';
+import { yiq } from 'yiq';
 
 console.log(yiq('#fff')); // #000
 console.log(yiq('#000')); // #fff
