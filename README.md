@@ -48,8 +48,10 @@ The second argument (options) can be used to define the colors that the function
 
 ```typescript
 yiq('#fff', {
-  white: '#f0f0f0',
-  black: '#333'
+  colors: {
+    white: '#f0f0f0',
+    black: '#333'
+  }
 }) // #333
 ```
 
@@ -60,8 +62,8 @@ yiq('#36d386', { threshold: 156 }) // #fff
 
 The default options are:
 
-- `options.white`: `#fff`;
-- `options.black`: `#000`;
+- `options.colors.white`: `#fff`;
+- `options.colors.black`: `#000`;
 - `options.threshold`: 128.
 
 ## Authors and License

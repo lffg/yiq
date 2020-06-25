@@ -18,8 +18,10 @@ describe('yiq', () => {
 
   it('should use the color options passed by the user over the default ones', () => {
     const options: YiqUserOptions = {
-      white: '#ddd',
-      black: '#333'
+      colors: {
+        white: '#ddd',
+        black: '#333'
+      }
     };
 
     expect(yiq('#fff', options)).toBe('#333');
